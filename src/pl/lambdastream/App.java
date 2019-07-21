@@ -20,7 +20,8 @@ public class App {
 
         List<Person> personList = getPersonsList();
         printList(personList);
-        List<Person> personList1 = personList.stream().filter(person -> person.getAge() >= 18).sorted((p1,p2) -> p1.getName().compareTo(p2.getName())).collect(Collectors.toList());
+        List<Person> personList1 = personList.stream().filter(person -> person.getAge() >= 18)
+                .sorted((p1,p2) -> p1.getName().compareTo(p2.getName())).collect(Collectors.toList());
         printList(personList1);
     }
 
